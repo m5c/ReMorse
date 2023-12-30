@@ -21,9 +21,9 @@ The program runs several phases, treating the original image:
 ![sample](sample/blanks.png)
  3) Pixel drop: For every line of actual content, the line is reduced to a 1D array. If any pixel in the given line's column is black, the array position is also black.
 ![sample](sample/drops.png)
- 4) Statistical analysis: All lines are analyzed and two distribution digrams are extracted. One for the sign lengths (anything that is black) and one for the break lenghts. The outcome is a overlap of two normal distirbutions, the saddle point is used to distinguish between `_` and `.`, likewise for character and word breaks.
+ 4) Statistical analysis: All lines are analyzed and two distribution diagrams are extracted. One for the sign lengths (anything that is black) and one for the break lengths. The outcome is a overlap of two normal distributions, the saddle point is used to distinguish between `_` and `.`, likewise for character and word breaks.
 ![sample](sample/stats-tagged.png)
- 5) All lines are once more parsed. 
+ 5) All lines are once more parsed. This time the program applies the threshold indicated in the previous distributions, to distinguish between dots, dashes, sign and word separators.
 ```
  .... . .-.. --- .-- --- .-. .-.. -..
  .... --- .-- .- .-. .
